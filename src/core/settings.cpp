@@ -413,7 +413,7 @@ void setClock() {
         if(!wifiConnected) wifiConnectMenu();
         if(!returnToMenu) {
             options = {
-              {"Brasilia",  [&]() { timeClient.setTimeOffset(-3 * 3600); tmz=0; }, tmz==0 ? true:false},
+              {"Colombo",  [&]() { timeClient.setTimeOffset(5.5 * 3600); tmz=0; }, tmz==0 ? true:false},
               {"Pernambuco",[&]() { timeClient.setTimeOffset(-2 * 3600); tmz=1; }, tmz==1 ? true:false},
               {"New York",  [&]() { timeClient.setTimeOffset(-4 * 3600); tmz=2; }, tmz==2 ? true:false},
               {"Lisbon",    [&]() { timeClient.setTimeOffset(1 * 3600);  tmz=3; }, tmz==3 ? true:false},
@@ -422,6 +422,7 @@ void setClock() {
               {"Tokyo",     [&]() { timeClient.setTimeOffset(9 * 3600);  tmz=6; }, tmz==6 ? true:false},
               {"Moscow",    [&]() { timeClient.setTimeOffset(3 * 3600);  tmz=7; }, tmz==7 ? true:false},
               {"Amsterdam", [&]() { timeClient.setTimeOffset(2 * 3600);  tmz=8; }, tmz==8 ? true:false},
+              {"Brasilia",  [&]() { timeClient.setTimeOffset(-3 * 3600); tmz=0; }, tmz==9 ? true:false},
               {"Main Menu", [=]() { backToMenu(); }},
             };
             if (!returnToMenu) {
